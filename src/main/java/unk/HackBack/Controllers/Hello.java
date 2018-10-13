@@ -1,4 +1,4 @@
-package unk.HackBack.controllers;
+package unk.HackBack.Controllers;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
