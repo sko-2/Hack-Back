@@ -27,13 +27,9 @@ repositories {
 dependencies {
 	compile(
 			"org.springframework.boot:spring-boot-starter-web",
-			'org.springframework.boot:spring-boot-starter-data-jpa'
+			'org.springframework.boot:spring-boot-starter-data-jpa',
+			'mysql:mysql-connector-java'
 	)
-    // https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp
-    compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
-    // https://mvnrepository.com/artifact/postgresql/postgresql
-    compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
-
-    implementation('org.springframework.boot:spring-boot-starter')
+	implementation('org.springframework.boot:spring-boot-starter')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

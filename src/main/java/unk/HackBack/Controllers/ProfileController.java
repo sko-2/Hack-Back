@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import unk.HackBack.Entities.Profile;
 import unk.HackBack.Repos.ProfileRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
 @RequestMapping("api/profiles")
 public class ProfileController {
@@ -27,16 +24,16 @@ public class ProfileController {
         return profiles;
     }
 
-    @GetMapping(value = "test")
-    public List<String> getUserName() {
-
-        Iterable<Profile> profiles = profileRepository.findAll();
-        List<String> userNames = new ArrayList<>();
-
-        profiles.forEach(x -> {
-            userNames.add(profileRepository.findUserNameByUserId(x.getProfileID()));
-        });
-
-        return userNames;
-    }
+//    @GetMapping(value = "test")
+//    public List<String> getUserName() {
+//
+//        Iterable<Profile> profiles = profileRepository.findAll();
+//        List<String> userNames = new ArrayList<>();
+//
+//        profiles.forEach(x -> {
+//            userNames.add(profileRepository.findUserNameByUserId(x.getProfileID()));
+//        });
+//
+//        return userNames;
+//    }
 }
