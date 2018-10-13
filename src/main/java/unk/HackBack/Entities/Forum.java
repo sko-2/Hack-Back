@@ -1,11 +1,10 @@
 package unk.HackBack.Entities;
 
-import com.sun.javafx.beans.IDProperty;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 import java.sql.Date;
 
 @Entity
@@ -17,15 +16,18 @@ public class Forum {
     private int forumID;
 
     @Column(name = "LongDescr")
+    @Size(max = 5000)
     private String forumDescr;
 
     @Column(name = "PostTime")
     private Date forumPostTime;
 
     @Column(name = "Title")
+    @Size(max = 100)
     private String forumTitle;
 
     @Column(name = "UserID")
+    @Size(max = 36)
     private String forumUserID;
 
     public int getForumID() {

@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 import java.sql.Date;
 
 @Entity
@@ -12,39 +14,51 @@ public class Profile {
 
     @Id
     @Column(name = "ProfileID")
+    @Size(max = 33)
     private String profileID;
 
     @Column(name = "UserName")
+    @Size(max = 50)
     private String userName;
 
     @Column(name = "FName")
+    @Size(max = 45)
     private String firstName;
 
     @Column(name = "LName")
+    @Size(max = 45)
     private String lastName;
 
     @Column(name = "Email")
+    @Email
+    @Size(max = 45)
     private String email;
 
     @Column(name = "Bio")
+    @Size(max = 500)
     private String bio;
 
     @Column(name = "DOB")
     private Date dateOfBirth;
 
     @Column(name = "Gender")
+    @Size(max = 15)
     private String gender;
 
     @Column(name = "Language")
+    @Size(max = 3)
     private String language;
 
     @Column(name = "COO")
+    @Size(max = 50)
     private String coo;
 
     @Column(name = "City")
+    @Size(max = 45)
     private String city;
 
     @Column(name = "State")
+    @Size(max = 2)
     private String state;
 
     public String getProfileID() {
