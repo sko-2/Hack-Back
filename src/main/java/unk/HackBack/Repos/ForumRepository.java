@@ -1,10 +1,10 @@
 package unk.HackBack.Repos;
 
 import org.springframework.data.repository.CrudRepository;
-import unk.HackBack.Entities.Profile;
+import unk.HackBack.Entities.Forum;
 
 import javax.persistence.Table;
 
-@Table(name = "Profile")
-public interface ProfileRepository extends CrudRepository<Profile, Integer> {
+@Table(name = "Forum")
+public interface ForumRepository extends CrudRepository<Forum, Integer> {
 }
