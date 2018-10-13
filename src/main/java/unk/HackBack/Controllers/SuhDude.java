@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import unk.HackBack.Models.TestObject;
 
-@CrossOrigin
 @RestController
 public class SuhDude {
 
