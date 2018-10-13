@@ -23,17 +23,4 @@ public class ProfileController {
 
         return profiles;
     }
-
-//    @GetMapping(value = "test")
-//    public List<String> getUserName() {
-//
-//        Iterable<Profile> profiles = profileRepository.findAll();
-//        List<String> userNames = new ArrayList<>();
-//
-//        profiles.forEach(x -> {
-//            userNames.add(profileRepository.findUserNameByUserId(x.getProfileID()));
-//        });
-//
-//        return userNames;
-//    }
 }
