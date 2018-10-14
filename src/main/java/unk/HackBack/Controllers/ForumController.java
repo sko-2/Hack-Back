@@ -4,11 +4,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import unk.HackBack.Models.ForumCardModel;
+import unk.HackBack.Models.ForumPostModel;
 import unk.HackBack.Services.ForumService;
 
 @RestController
@@ -40,5 +38,12 @@ public class ForumController {
         Pageable pageable = PageRequest.of(page, pageSize, SORT_BY_DATE_DESC);
         Page<ForumCardModel> cards = forumService.getForumCards(pageable);
         return cards;
+    }
+
+    @GetMapping
+    @RequestMapping(value = "{id}")
+    public ForumPostModel getForum(@PathVariable(value = "id") Integer id) {
+
+        return forumService.getForumPost(id);
     }
 }
