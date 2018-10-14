@@ -4,10 +4,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import unk.HackBack.Entities.Profile;
+import unk.HackBack.Models.ProfileModel;
 import unk.HackBack.Repos.ProfileRepository;
 
+import javax.websocket.server.PathParam;
+
 @RestController
-@RequestMapping("api/profiles")
+@RequestMapping("api/profiles/")
 public class ProfileController {
 
     private ProfileRepository profileRepository;
@@ -17,10 +20,11 @@ public class ProfileController {
     }
 
     @GetMapping
-    public Iterable<Profile> getProfile() {
+    @RequestMapping(value = "{id}", params = "id")
+    public ProfileModel getProfile(@PathParam(value = "id") String id) {
 
-        Iterable<Profile> profiles = profileRepository.findAll();
-
-        return profiles;
+        Profile profile = profileRepository.findById(id).get();
+        ProfileModel model = new ProfileModel(profile.getFirstName(), profile.getLastName(), profile.getEmail(), profile.getBio(), profile.getDateOfBirth(), profile.getGender(), profile.getLanguage(), profile.getCity(), profile.getState());
+        return model;
     }
 }
