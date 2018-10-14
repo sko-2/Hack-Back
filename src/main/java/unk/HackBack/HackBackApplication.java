@@ -12,4 +12,3 @@ public class HackBackApplication {
 		SpringApplication.run(HackBackApplication.class, args);
 	}
 }
-
