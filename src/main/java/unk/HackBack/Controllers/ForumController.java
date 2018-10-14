@@ -43,7 +43,7 @@ public class ForumController {
     @GetMapping
     @RequestMapping(value = "{id}")
     public ForumPostModel getForum(@PathVariable(value = "id") Integer id) {
-        // TODO: Start here dude
-        return null;
+
+        return forumService.getForumPost(id);
     }
 }

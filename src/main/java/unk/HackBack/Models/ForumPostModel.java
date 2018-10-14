@@ -14,4 +14,20 @@ public class ForumPostModel {
         this.forum = forum;
         this.comments = comments;
     }
+
+    public ForumCardModel getForum() {
+        return forum;
+    }
+
+    public void setForum(ForumCardModel forum) {
+        this.forum = forum;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 }
