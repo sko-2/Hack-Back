@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class ProfileModel {
 
+    private String userName;
     private String firstName;
     private String lastName;
     private String email;
@@ -14,7 +15,8 @@ public class ProfileModel {
     private String city;
     private String state;
 
-    public ProfileModel(String firstName, String lastName, String email, String bio, Date dateOfBirth, String gender, String language, String city, String state) {
+    public ProfileModel(String userName, String firstName, String lastName, String email, String bio, Date dateOfBirth, String gender, String language, String city, String state) {
+        this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -24,6 +26,14 @@ public class ProfileModel {
         this.language = language;
         this.city = city;
         this.state = state;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getFirstName() {

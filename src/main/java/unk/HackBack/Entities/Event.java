@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
-import java.time.LocalDateTime;
+import java.sql.Date;
 
 @Entity
 @Table(name = "Event")
@@ -46,7 +46,7 @@ public class Event {
     private String longDesc;
 
     @Column(name = "EventDate")
-    private LocalDateTime dateTime;
+    private Date dateTime;
 
     public Integer getEventId() {
         return eventId;
@@ -112,11 +112,11 @@ public class Event {
         this.longDesc = longDesc;
     }
 
-    public LocalDateTime getDateTime() {
+    public Date getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
+    public void setDateTime(Date dateTime) {
         this.dateTime = dateTime;
     }
 
